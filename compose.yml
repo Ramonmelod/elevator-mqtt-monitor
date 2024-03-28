@@ -1,0 +1,8 @@
+services:
+  app01:
+    build:
+      context: .
+      dockerfile: dockerfile
+      network_mode: host
+  MQTTSERVER:
+    image: eclipse-mosquitto:2.0.18-openssl
