@@ -8,8 +8,10 @@
 
 - To install dependencies run: pip install -r requirements.txt
 - for downloading mosquito run: docker run -it -p 1883:1883 -p 9001:9001 -v mosquitto.conf:/mosquitto/config/mosquitto.conf eclipse-mosquitto
+   or 
+ docker run -it -p 1883:1883 eclipse-mosquitto
 
-to acess the shell from the mosquitto container run: sudo docker exec -it pensive_tharp sh
+to acess the shell from the mosquitto container run: sudo docker exec -it <containerId or name>
 
 sudo apt-get update -y && sudo apt-get upgrade -y
 

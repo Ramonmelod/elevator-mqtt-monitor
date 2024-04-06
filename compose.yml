@@ -1,5 +1,5 @@
 services:
-  app01:
+  sub:
     build:
       context: .
       dockerfile: dockerfile
