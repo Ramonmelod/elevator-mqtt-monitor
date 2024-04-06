@@ -1,7 +1,7 @@
 import paho.mqtt.client as mqtt
 
 def onMensage(client, userdata, msg):
-    print(msg.topic + ": " + mensage.payload.decode())
+    print(msg.topic + ": " + msg.payload.decode())
 
 
 client = mqtt.Client(mqtt.CallbackAPIVersion.VERSION2)
@@ -18,3 +18,4 @@ except:
     print("disconnecting from broker ...")
 
 client.disconnect()
+
