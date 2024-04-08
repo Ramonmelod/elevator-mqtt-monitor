@@ -7,6 +7,8 @@ def onMensage(client, userdata, msg):
 client = mqtt.Client(mqtt.CallbackAPIVersion.VERSION2)
 client.on_message = onMensage
 
+client.username_pw_set(username="ufsc", password="ufsc")
+
 client.connect("localhost",1883,60)
 client.subscribe("test/status")
 
