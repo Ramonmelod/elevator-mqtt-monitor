@@ -7,7 +7,7 @@
 ## Instructions:
 
 - To install dependencies run: pip install -r requirements.txt
-- for downloading mosquito run: docker run --name mosquitto -it -p 1883:1883 -p 9001:9001 -v ~/Projects/elevator-mqtt-monitor/mosquitto.conf:/mosquitto/config/mosquitto.conf eclipse-mosquitto (check the path to the file mosquitto.conf on your computer)
+- for downloading mosquito run: docker run --name mosquitto -it -p 1883:1883 -p 9001:9001 -v ~/Projects/elevator-mqtt-monitor/mosquitto.conf:/mosquitto/config/mosquitto.conf eclipse-mosquitto (check the path to the file mosquitto.conf on your computer) ( this command will downloand the lastest eclipse-mosquitto version)
 
   or
   docker run -it -p 1883:1883 eclipse-mosquitto
@@ -23,3 +23,5 @@ sudo apt-get update -y && sudo apt-get upgrade -y
 
 - Testing in terminal from the mosquito-clients: mosquitto_sub -t "test"
   mosquitto_pub -m "Mensagem" -t "test"
+
+- To set a password to MQTT broker, run inside the container the following commad: mosquitto_passwd -c /mosquitto/config/pass <username>
