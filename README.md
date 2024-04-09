@@ -25,3 +25,7 @@ sudo apt-get update -y && sudo apt-get upgrade -y
   mosquitto_pub -m "Mensagem" -t "test"
 
 - To set a password to MQTT broker, run inside the container the following commad: mosquitto_passwd -c /mosquitto/config/pass <username>
+
+- To set a virtual environment for python:
+  python -m venv environment_name
+  source environment_name/bin/activate
