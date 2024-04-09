@@ -28,4 +28,5 @@ sudo apt-get update -y && sudo apt-get upgrade -y
 
 - To set a virtual environment for python:
   python -m venv environment_name
+
   source environment_name/bin/activate
