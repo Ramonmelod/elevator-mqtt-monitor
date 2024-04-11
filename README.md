@@ -2,29 +2,35 @@
 
 ## Mqqt basic implementation
 
-- Info: This project is under construction
+- Info: This project is under construction and compose.yml is not ready yet
 
 ## Instructions:
 
+### Installing dependencies and running MQTT broker on docker
+
 - To install dependencies run: pip install -r requirements.txt
+- Before running moquitto on docker erase:password_file /mosquitto/config/pass from the file mosquitto.conf then run the comand bellow mapping the path for your file mosquitto.config on your computer.
+
 - for downloading mosquito run: docker run --name mosquitto -it -p 1883:1883 -p 9001:9001 -v ~/Projects/elevator-mqtt-monitor/mosquitto.conf:/mosquitto/config/mosquitto.conf eclipse-mosquitto (check the path to the file mosquitto.conf on your computer) ( this command will downloand the lastest eclipse-mosquitto version)
 
-  or
-  docker run -it -p 1883:1883 eclipse-mosquitto
+- After running mosquitto on docker access the shell from the mosquitto container by the command: sudo docker exec -it <containerId or name>
+- Inside your container run the following commad for defining a User and a Password: mosquitto_passwd -c /mosquitto/config/pass <username>
+- Stop the conainer and rewrite inside the file mosquitto.conf: `password_file /mosquitto/config/pass`
 
-to acess the shell from the mosquitto container run: sudo docker exec -it <containerId or name>
+### installing Mosquitto broker on your ubuntu
 
-sudo apt-get update -y && sudo apt-get upgrade -y
+- After running: sudo apt-get update -y && sudo apt-get upgrade -y
 
-- To install mosquitto on yout ubuntu run the comands bellow:
-  sudo apt-get update -y && sudo apt-get upgrade -y  
-   sudo apt-get install mosquitto
-  sudo apt-get install mosquitto-clients
+run the comands bellow:
+sudo apt-get update -y && sudo apt-get upgrade -y  
+ sudo apt-get install mosquitto
+sudo apt-get install mosquitto-clients
 
-- Testing in terminal from the mosquito-clients: mosquitto_sub -t "test"
-  mosquitto_pub -m "Mensagem" -t "test"
+- After the instalation of the mosquito and mosquitto-clients on your ubuntu you can test your broker running on the docker container by running the comands bellow:
+- mosquitto_sub -t "test"
+- mosquitto_pub -m "Mensagem" -t "test"
 
-- To set a password to MQTT broker, run inside the container the following commad: mosquitto_passwd -c /mosquitto/config/pass <username>
+### Setting a virtual environment for python:
 
 - To set a virtual environment for python:
   python -m venv environment_name
