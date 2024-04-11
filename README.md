@@ -9,7 +9,7 @@
 ### Installing dependencies and running MQTT broker on docker
 
 - To install dependencies run: pip install -r requirements.txt
-- Before running moquitto on docker erase:password_file /mosquitto/config/pass from the file mosquitto.conf then run the comand bellow mapping the path for your file mosquitto.config on your computer.
+- Before running moquitto on docker erase: `password_file /mosquitto/config/pass` from the file mosquitto.conf then run the comand bellow mapping the path for your file mosquitto.config on your computer.
 
 - for downloading mosquito run: docker run --name mosquitto -it -p 1883:1883 -p 9001:9001 -v ~/Projects/elevator-mqtt-monitor/mosquitto.conf:/mosquitto/config/mosquitto.conf eclipse-mosquitto (check the path to the file mosquitto.conf on your computer) ( this command will downloand the lastest eclipse-mosquitto version)
 
@@ -36,3 +36,7 @@ sudo apt-get install mosquitto-clients
   python -m venv environment_name
 
   source environment_name/bin/activate
+
+### Using a Esp32 to monitor a sign
+
+- the file esp32publisher.py shell be used as code for micropython on a esp32
