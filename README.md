@@ -1,5 +1,19 @@
 # MQTT project
 
+<div>
+<img src="https://raw.githubusercontent.com/eclipse/mosquitto/master/logo/mosquitto-text-side.svg" alt="logo mosquitto" width="200" height="auto">
+<img src="https://user-images.githubusercontent.com/25181517/183423507-c056a6f9-1ba8-4312-a350-19bcbc5a8697.png" alt="logo python" width="200" height="auto">
+</div>
+
+## tecnologias utilizadas:
+
+- `Eclipse-Mosquitto MQTT broker`
+- `Python`
+
+## Autor
+
+- Ramon Melo — Linkedin: [/in/ramonmelod](https://www.linkedin.com/in/ramonmelod/)
+
 ## Mqqt basic implementation
 
 - Info: This project is under construction and compose.yml is not ready yet
