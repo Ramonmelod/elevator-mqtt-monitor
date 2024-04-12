@@ -54,3 +54,4 @@ sudo apt-get install mosquitto-clients
 ### Using a Esp32 to monitor a sign
 
 - the file esp32publisher.py shell be used as code for micropython on a esp32
+- this project uses the uses: ESP32_GENERIC-20240222-v1.22.2. You can try other version of micropython, but risks of unexpected behavior are always possible
