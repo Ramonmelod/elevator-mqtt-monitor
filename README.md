@@ -5,7 +5,7 @@
 <img src="https://repository-images.githubusercontent.com/53614190/b11dd480-90b3-11eb-903d-8c48f62e3172" alt="logo mosquitto" width="200" height="auto">
 </div>
 
-## tecnologias utilizadas:
+## Used Technologies:
 
 - `Eclipse-Mosquitto MQTT broker`
 - `Python`
