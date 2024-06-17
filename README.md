@@ -46,10 +46,14 @@ sudo apt-get install mosquitto-clients
 
 ### Setting a virtual environment for python:
 
-- To set a virtual environment for python:
+- To set a virtual environment for python run the command:
+```sh
   python -m venv environment_name
-
+```
+then:
+```sh
   source environment_name/bin/activate
+```
 
 ### Using a Esp32 to monitor a sign
 
