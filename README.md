@@ -10,7 +10,7 @@
 - `Eclipse-Mosquitto MQTT broker`
 - `Python`
 
-## Autor
+## Author
 
 - Ramon Melo — Linkedin: [/in/ramonmelod](https://www.linkedin.com/in/ramonmelod/)
 
